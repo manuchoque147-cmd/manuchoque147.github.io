@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Guía Completa de Hardware — Futurista y Tecnológica</title>
+  <meta name="description" content="Guía avanzada y completa de hardware con explicaciones extensas sobre todas las partes de un ordenador: CPU, GPU, RAM, placa, buses, conectores, refrigeración, fuente, tipos de almacenamiento y periféricos. Diseño holográfico azul/cian." />
+  <meta name="keywords" content="hardware, CPU, GPU, RAM, placa base, PSU, refrigeración, NVMe, PCIe, montaje, guía, Edgar Inda" />
+  <link rel="stylesheet" href="styles.css">
+  <meta name="author" content="Edgar Inda">
+</head>
+<body>
+  <!-- Canvas de partículas holográfico -->
+  <canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
+
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="#intro" aria-label="Ir a inicio">🔩 <span class="brand-title">Guía de Hardware Futurista</span></a>
+      <nav class="nav" id="nav" aria-label="Principal" role="navigation">
+        <a href="#intro">Inicio</a>
+        <a href="#clasificacion">Clasificación</a>
+        <a href="#componentes">Componentes</a>
+        <a href="#buses-y-conectores">Buses & Conectores</a>
+        <a href="#refrigeracion">Refrigeración</a>
+        <a href="#energia">Energía & PSU</a>
+        <a href="#almacenamiento">Almacenamiento</a>
+        <a href="#perifericos">Periféricos</a>
+        <a href="#montaje">Montaje</a>
+        <a href="#galeria">Galería</a>
+        <a href="#glosario">Glosario</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+      <div class="controls">
+        <button id="menu-toggle" class="icon-btn" aria-label="Abrir menú">☰</button>
+        <button id="theme-toggle" class="icon-btn" aria-label="Cambiar tema">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-grid" id="main" role="main">
+    <aside class="sidebar" id="sidebar" aria-label="Navegación secundaria">
+      <div class="search">
+        <input id="search" placeholder="Buscar en la guía..." aria-label="Buscar" />
+      </div>
+
+      <nav class="toc" aria-label="Tabla de contenido">
+        <h3>Contenido</h3>
+        <ul id="toc-list">
+          <li><a href="#intro">¿Qué es el hardware?</a></li>
+          <li><a href="#clasificacion">Clasificación</a></li>
+          <li><a href="#componentes">Componentes</a></li>
+          <li><a href="#buses-y-conectores">Buses & Conectores</a></li>
+          <li><a href="#refrigeracion">Refrigeración</a></li>
+          <li><a href="#energia">Energía & PSU</a></li>
+          <li><a href="#almacenamiento">Almacenamiento</a></li>
+          <li><a href="#perifericos">Periféricos</a></li>
+          <li><a href="#montaje">Montaje</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#glosario">Glosario</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="attribution">Creado por <strong>Edgar Inda</strong> · Versión completa holográfica</div>
+    </aside>
+
+    <article class="content" id="content">
+
+      <!-- INTRO -->
+      <section id="intro" class="panel" data-animate>
+        <h2>¿Qué es el hardware?</h2>
+        <p>El <strong>hardware</strong> son los componentes físicos y eléctricos que permiten que un sistema informático funcione. Va desde la microarquitectura de la CPU hasta el chasis que alberga todos los componentes. Esta guía cubre su estructura, funcionamiento, interconexiones, mantenimiento y criterios de compra profesional.</p>
+        <p>Además de los componentes tradicionales, se describen tecnologías modernas: NVMe, PCIe 4/5, chiplets, aceleradores AI, y prácticas de refrigeración líquida y pasiva para diseños silenciosos y de alto rendimiento.</p>
+      </section>
+
+      <!-- CLASIFICACIÓN -->
+      <section id="clasificacion" class="panel" data-animate>
+        <h2>Clasificación del hardware</h2>
+        <p>Resumen de grandes categorías y su rol:</p>
+        <ul>
+          <li><strong>Procesamiento:</strong> CPU (control y cálculo general), GPU (cálculos paralelos), aceleradores (TPU/NPU para IA).</li>
+          <li><strong>Memoria:</strong> RAM (temporal), VRAM (GPU), memoria persistente (SSD/HDD).</li>
+          <li><strong>I/O y almacenamiento:</strong> discos, controladoras RAID, interfaces de red.</li>
+          <li><strong>Interconexión:</strong> placa base, buses, conectores, PCIe lanes.</li>
+          <li><strong>Alimentación y refrigeración:</strong> PSU, radiadores, ventiladores, pump, reservoirs.</li>
+          <li><strong>Periféricos:</strong> pantalla, teclado, ratón, audio, VR, impresión.</li>
+        </ul>
+      </section>
+
+      <!-- COMPONENTES -->
+      <section id="componentes" class="panel" data-animate>
+        <h2>Componentes internos y externos — descripción completa</h2>
+
+        <!-- CPU -->
+        <div class="component-block hover-tilt">
+          <div class="component-img">
+            <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2021/06/procesador-intel-core-2383049.jpg?tf=3840x" alt="CPU">
+          </div>
+          <div class="component-text">
+            <h3>CPU — Unidad Central de Procesamiento</h3>
+            <p>Función: ejecutar instrucciones del sistema operativo y aplicaciones. Componentes internos importantes:</p>
+            <ul>
+              <li><strong>ALU</strong> (Arithmetic Logic Unit): operaciones aritméticas y lógicas.</li>
+              <li><strong>FPU</strong> (Floating Point Unit): cálculos en coma flotante.</li>
+              <li><strong>Pipeline</strong> y ejecución fuera de orden para mejorar rendimiento.</li>
+              <li><strong>Caches L1/L2/L3</strong>: memorias rápidas para reducir latencias.</li>
+              <li><strong>Controlador de memoria</strong> (integrado en el die en CPUs modernas).</li>
+            </ul>
+            <p>Parámetros clave: núcleos/hilos, frecuencia base/boost, litografía (nm), TDP, soporte de instrucciones (AVX, SSE) y compatibilidad de socket.</p>
+          </div>
+        </div>
+
+        <!-- GPU -->
+        <div class="component-block reverse hover-tilt">
+          <div class="component-img">
+            <img src="https://media.ldlc.com/r1600/ld/products/00/06/20/52/LD0006205243.jpg" alt="GPU">
+          </div>
+          <div class="component-text">
+            <h3>GPU — Unidad de Procesamiento Gráfico</h3>
+            <p>Función: procesamiento masivo en paralelo. Internamente incluye núcleos de sombreado, unidades de textura, ROP y controladores de memoria VRAM.</p>
+            <p>Usos: render 3D, codificación/decodificación de vídeo, simulación científica, redes neuronales y cómputo GPGPU.</p>
+            <p>Parámetros: cantidad y tipo de núcleos (CUDA, Stream), frecuencia, tamaño y ancho de bus de VRAM (128/256/384-bit), TDP y soporte de tecnologías (Ray Tracing, DLSS, FSR).</p>
+          </div>
+        </div>
+
+        <!-- RAM -->
+        <div class="component-block hover-tilt">
+          <div class="component-img">
+            <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2021/09/memoria-ram-2483735.jpg?tf=1920x" alt="RAM">
+          </div>
+          <div class="component-text">
+            <h3>RAM — Memoria de acceso aleatorio</h3>
+            <p>Tipologías: DDR3 / DDR4 / DDR5 y ECC. DDR5 introduce mayor densidad y canales internos para mejorar ancho de banda.</p>
+            <p>Factores prácticos: frecuencia (MHz), latencia CAS (CL), voltaje, canales (single/dual/quad) y perfiles XMP/DOCP para overclock automático.</p>
+          </div>
+        </div>
+
+        <!-- STORAGE -->
+        <div class="component-block reverse hover-tilt">
+          <div class="component-img">
+            <img src="https://www.cfd.co.jp/webpim/product/image/c/crucial-t710-series/ct2000t710ssd5-jp/ct2000t710ssd5-jp__0101.png" alt="Almacenamiento">
+          </div>
+          <div class="component-text">
+            <h3>Almacenamiento — HDD / SSD / NVMe</h3>
+            <p>Descripción y diferencias:</p>
+            <ul>
+              <li><strong>HDD</strong>: disco magnético con grandes capacidades y coste/GB bajo; latencias y velocidades secuenciales limitadas.</li>
+              <li><strong>SSD SATA</strong>: NAND flash con interfaz SATA, buena mejora en tiempo de acceso.</li>
+              <li><strong>NVMe (M.2 / PCIe)</strong>: protocolo diseñado para NAND, altas transferencias y baja latencia; ideal para sistema y cargas intensivas.</li>
+            </ul>
+            <p>Métricas importantes: IOPS, MB/s secuenciales/aleatorios, latencia, TBW (endurance) y tiempo medio entre fallos (MTBF).</p>
+          </div>
+        </div>
+
+        <!-- MOTHERBOARD -->
+        <div class="component-block hover-tilt">
+          <div class="component-img">
+            <img src="https://media.ldlc.com/r1600/ld/products/00/05/98/32/LD0005983231.jpg" alt="Placa Base">
+          </div>
+          <div class="component-text">
+            <h3>Placa Base — Motherboard</h3>
+            <p>Función: interconectar todos los componentes. Partes clave:</p>
+            <ul>
+              <li><strong>Socket CPU</strong> y chipset (controla PCIe lanes, USB, almacenamiento).</li>
+              <li><strong>VRM</strong> (fases, MOSFETs, inductores): regulación estable para CPU/GPU.</li>
+              <li><strong>Ranuras</strong>: PCIe x16/x8/x4/x1, M.2 para NVMe, DIMM para RAM.</li>
+              <li><strong>Conectividad</strong>: Ethernet, audio, puertos USB, Wi-Fi/BT integrados en modelos avanzados.</li>
+            </ul>
+            <p>Factores de forma: ATX, Micro-ATX, Mini-ITX; elegir según tamaño del chasis y necesidades de expansión.</p>
+          </div>
+        </div>
+
+        <!-- PSU -->
+        <div class="component-block reverse hover-tilt">
+          <div class="component-img">
+            <img src="https://img.pccomponentes.com/articles/1086/10868229/5470-msi-meg-ai1600t-pcie5-atx-31-pcie-51-1600w-80-plus-titanium-modular-caracteristicas.jpg" alt="Fuente de Alimentación">
+          </div>
+          <div class="component-text">
+            <h3>Fuente de alimentación (PSU)</h3>
+            <p>La PSU convierte AC a DC y debe entregar potencia estable. Parámetros y características:</p>
+            <ul>
+              <li><strong>Potencia nominal</strong> (W) y picos; calcula consumo total con margen +30%.</li>
+              <li><strong>Certificación 80+</strong> (Bronze → Titanium) indica eficiencia energética.</li>
+              <li><strong>Modularidad</strong>: cables desmontables para orden y flujo de aire.</li>
+              <li><strong>Protecciones</strong>: OVP, OCP, SCP, OPP. Importante seguridad eléctrica.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PERIFÉRICOS -->
+        <div class="component-block hover-tilt">
+          <div class="component-img">
+            <img src="https://i.rtings.com/assets/products/x4xvSa5x/razer-viper-v3-pro/design-medium.jpg?format=auto" alt="Periféricos">
+          </div>
+          <div class="component-text">
+            <h3>Periféricos</h3>
+            <p>Elementos externos que permiten la interacción: teclados, ratones, monitores, audio, cámaras y dispositivos VR/AR. Importante considerar latencia (audio), polling rate (ratones) y fidelidad de color (monitores para edición).</p>
+          </div>
+        </div>
+
+        <!-- REFRIGERACION -->
+        <div class="component-block reverse hover-tilt">
+          <div class="component-img">
+            <img src="https://www.vsgamers.es/thumbnails/product_gallery_large/uploads/products/asus/refrigeracion/sistema-de-refrigeracion-liquida-para-cpu-rog-strix-lc-360-asus/galeria/sistema-de-refrigeracion-liquida-para-cpu-rog-strix-lc-360-asus-galeria.jpg" alt="Refrigeración">
+          </div>
+          <div class="component-text">
+            <h3>Refrigeración</h3>
+            <p>Tipos y componentes:</p>
+            <ul>
+              <li><strong>Aire:</strong> disipadores y ventiladores; buena relación coste/eficacia.</li>
+              <li><strong>AIO (All-In-One):</strong> circuito cerrado de líquido con bomba integrada.</li>
+              <li><strong>Custom Loop:</strong> bomba, radiador, reservoir, fittings y líquido; máxima capacidad de disipación y personalización.</li>
+              <li><strong>Pastas térmicas:</strong> compuestos de diferente conductividad (metal, cerámica, silicona).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Otros componentes: BIOS, CMOS, baterías, sensores -->
+        <div class="component-block hover-tilt">
+          <div class="component-img">
+            <div class="gallery-item small">BIOS / CMOS</div>
+          </div>
+          <div class="component-text">
+            <h3>BIOS / UEFI, CMOS y sensores</h3>
+            <p>El firmware inicializa el hardware al arrancar. La batería CMOS mantiene la configuración del reloj y parámetros. Las placas modernas exponen múltiples sensores de voltaje, temperatura y velocidad de ventiladores para control automático.</p>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Buses y conectores -->
+      <section id="buses-y-conectores" class="panel" data-animate>
+        <h2>Buses, ranuras y conectores — guía técnica</h2>
+        <p>Interconexión entre componentes: entender los buses y conectores es crítico para compatibilidad y rendimiento.</p>
+
+        <h3>PCI Express (PCIe)</h3>
+        <p>Interfaz de alta velocidad: versiones (3.0, 4.0, 5.0) y lanes (x1, x4, x8, x16). Una GPU suele usar x16; los SSD NVMe usan x4 lanes. PCIe 4/5 aumenta ancho de banda por lane.</p>
+
+        <h3>Conectores de almacenamiento</h3>
+        <ul>
+          <li><strong>SATA III:</strong> 6 Gbps, usado en HDD y muchos SSD 2.5".</li>
+          <li><strong>M.2 NVMe:</strong> factor forma M.2 con protocolo NVMe sobre PCIe, latencias muy bajas.</li>
+          <li><strong>U.2 / PCIe Add-in:</strong> soluciones de centro de datos y almacenamiento empresarial.</li>
+        </ul>
+
+        <h3>Conectores de alimentación y panel frontal</h3>
+        <p>24-pin ATX, 8-pin EPS (CPU), 6/8-pin PCIe (GPU), cables SATA power y Molex. El panel frontal incluye pines para power, reset, LEDs, USB front y audio HD.</p>
+
+        <h3>Puertos de expansión y externas</h3>
+        <ul>
+          <li><strong>USB:</strong> versiones 2.0, 3.2 Gen1/2, USB4 (Thunderbolt compatible en muchos casos).</li>
+          <li><strong>Thunderbolt / USB-C:</strong> datos, vídeo y suministro de energía (PD).</li>
+          <li><strong>DisplayPort / HDMI:</strong> salida de vídeo, varias versiones con soporte para 4K/8K y frecuencias altas.</li>
+          <li><strong>Ethernet:</strong> 1G, 2.5G, 5G, 10G para redes locales de alta velocidad.</li>
+        </ul>
+      </section>
+
+      <!-- Refrigeración -->
+      <section id="refrigeracion" class="panel" data-animate>
+        <h2>Estrategias de refrigeración y fluido dinámico</h2>
+        <p>Planifica según TDP y objetivo (silencio, rendimiento, overclock):</p>
+        <ul>
+          <li>Flujo de aire optimizado: intake en frontal y parte inferior, exhaust en parte trasera y superior.</li>
+          <li>Curvas PWM: perfiles basados en temperatura CPU/GPU para balance ruido/rendimiento.</li>
+          <li>Compatibilidad de radiadores: 120 / 240 / 360 / 480 mm según chasis.</li>
+          <li>Mantenimiento: limpieza regular, cambio de líquido y revisión de fittings si usas custom loop.</li>
+        </ul>
+      </section>
+
+      <!-- Energia -->
+      <section id="energia" class="panel" data-animate>
+        <h2>Energía y gestión eléctrica</h2>
+        <p>Más allá de la PSU: UPS, PDU y distribución de energía en entornos profesionales.</p>
+        <ul>
+          <li><strong>UPS:</strong> protección ante caídas de tensión y picos; esencial para servidores/estaciones de trabajo.</li>
+          <li><strong>Power staging:</strong> en rigs con GPUs múltiples, designar rails/PSU secundarias.</li>
+          <li><strong>Monitorización:</strong> usar sensores y software (HWInfo, IPMI) para registro y alertas.</li>
+        </ul>
+      </section>
+
+      <!-- Almacenamiento -->
+      <section id="almacenamiento" class="panel" data-animate>
+        <h2>Tipos de almacenamiento, RAID y NAS</h2>
+        <p>Opciones según necesidad:</p>
+        <ul>
+          <li><strong>Local:</strong> SSD NVMe + HDD de alta capacidad para datos.</li>
+          <li><strong>RAID:</strong> RAID0 (velocidad), RAID1 (redundancia), RAID5/6 (balance rendimiento/seguridad) — requiere controladora y planificación.</li>
+          <li><strong>NAS:</strong> almacenamiento en red para backups, media servers y acceso compartido.</li>
+        </ul>
+      </section>
+
+      <!-- Perifericos -->
+      <section id="perifericos" class="panel" data-animate>
+        <h2>Periféricos y ergonomía</h2>
+        <p>Selecciona periféricos según tarea: gaming, productividad, edición o audio profesional. Ten en cuenta polling rate, latencia, precisión y estándares de color para monitores (sRGB, AdobeRGB).</p>
+      </section>
+
+      <!-- Montaje -->
+      <section id="montaje" class="panel" data-animate>
+        <h2>Montaje completo — checklist experto</h2>
+        <ol>
+          <li>Verificar compatibilidad (socket, TDP, tamaño GPU, altura de disipador).</li>
+          <li>Instalar CPU y disipador antes de colocar la placa en el chasis si es necesario.</li>
+          <li>Conectar alimentación principal y EPS CPU, luego alimentar GPU y unidades.</li>
+          <li>Primer arranque POST: comprobar beep codes / LEDs de debug si hay problemas.</li>
+          <li>Actualizar BIOS/UEFI, activar perfil XMP y ajustar curvas de ventilador.</li>
+        </ol>
+      </section>
+
+      <!-- GALERÍA -->
+      <section id="galeria" class="panel" data-animate>
+        <h2>Galería de componentes</h2>
+        <p>Pasa el ratón sobre cada imagen para ver una descripción. (He mantenido las imágenes originales que colocaste.)</p>
+        <div class="gallery-grid" id="gallery">
+          <!-- Uso las imágenes que tú pediste mantener -->
+          <div class="gallery-card" data-title="CPU — Die y encapsulado" data-desc="Ejemplo de procesador moderno: múltiples núcleos y cache integrada.">
+            <img data-src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2021/06/procesador-intel-core-2383049.jpg?tf=3840x" alt="CPU">
+          </div>
+
+          <div class="gallery-card" data-title="GPU — Tarjeta dedicada" data-desc="GPU con disipador y ventiladores; VRAM dedicada y conectores PCIe.">
+            <img data-src="https://media.ldlc.com/r1600/ld/products/00/06/20/52/LD0006205243.jpg" alt="GPU">
+          </div>
+
+          <div class="gallery-card" data-title="Memoria RAM" data-desc="Módulos DDR con disipadores y perfil XMP para overclock.">
+            <img data-src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2021/09/memoria-ram-2483735.jpg?tf=1920x" alt="RAM">
+          </div>
+
+          <div class="gallery-card" data-title="SSD NVMe" data-desc="Unidad NVMe de alto rendimiento para sistema y aplicaciones.">
+            <img data-src="https://www.cfd.co.jp/webpim/product/image/c/crucial-t710-series/ct2000t710ssd5-jp/ct2000t710ssd5-jp__0101.png" alt="SSD NVMe">
+          </div>
+
+          <div class="gallery-card" data-title="Placa Base" data-desc="Motherboard con VRM robusto, slots M.2 y varias ranuras PCIe.">
+            <img data-src="https://media.ldlc.com/r1600/ld/products/00/05/98/32/LD0005983231.jpg" alt="Placa Base">
+          </div>
+
+          <div class="gallery-card" data-title="Fuente de alimentación" data-desc="PSU modular con alta eficiencia 80+ y conectores PCIe/ATX.">
+            <img data-src="https://img.pccomponentes.com/articles/1086/10868229/5470-msi-meg-ai1600t-pcie5-atx-31-pcie-51-1600w-80-plus-titanium-modular-caracteristicas.jpg" alt="Fuente">
+          </div>
+
+          <div class="gallery-card" data-title="Periféricos" data-desc="Ejemplo de periférico: ratón de alta precisión para gaming/profesional.">
+            <img data-src="https://i.rtings.com/assets/products/x4xvSa5x/razer-viper-v3-pro/design-medium.jpg?format=auto" alt="Periféricos">
+          </div>
+
+          <div class="gallery-card" data-title="Refrigeración líquida" data-desc="AIO 360mm para disipación eficiente en cargas altas.">
+            <img data-src="https://www.vsgamers.es/thumbnails/product_gallery_large/uploads/products/asus/refrigeracion/sistema-de-refrigeracion-liquida-para-cpu-rog-strix-lc-360-asus/galeria/sistema-de-refrigeracion-liquida-para-cpu-rog-strix-lc-360-asus-galeria.jpg" alt="Refrigeración">
+          </div>
+
+          <!-- placeholder cards para otros elementos (sin URL externa) -->
+          <div class="gallery-card" data-title="Chasis" data-desc="Torres ATX con flujo optimizado y espacio para radiadores."><div class="gallery-placeholder">Chasis</div></div>
+          <div class="gallery-card" data-title="Conectores y cables" data-desc="SATA, Molex, ATX 24-pin, EPS 8-pin y cables modulares."><div class="gallery-placeholder">Cables</div></div>
+        </div>
+
+        <!-- tooltip emergente para galería (rellenado por JS) -->
+        <div id="gallery-tooltip" class="gallery-tooltip" role="status" aria-hidden="true"></div>
+      </section>
+
+      <!-- GLOSARIO -->
+      <section id="glosario" class="panel" data-animate>
+        <h2>Glosario técnico ampliado</h2>
+        <dl>
+          <dt>VRM</dt><dd>Módulo regulador que alimenta CPU/GPU con voltaje estable y filtrado.</dd>
+          <dt>PCIe</dt><dd>Interfaz serial de alta velocidad para expansión; versiones 3.0/4.0/5.0 aumentan ancho de banda por lane.</dd>
+          <dt>NVMe</dt><dd>Protocolo optimizado para SSDs sobre PCIe; reduce latencias y aumenta throughput.</dd>
+          <dt>TDP</dt><dd>Potencia térmica que un sistema de refrigeración debe disipar para ese componente.</dd>
+        </dl>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="panel" data-animate>
+        <h2>Preguntas frecuentes</h2>
+        <details><summary>¿Qué componente mejora más el rendimiento en juegos?</summary><p>La GPU suele ser el factor decisivo en juegos; sin embargo, para altas tasas de refresco en 1080p, una CPU potente también es clave.</p></details>
+        <details><summary>¿Qué ventajas tiene un SSD NVMe sobre un SSD SATA?</summary><p>NVMe ofrece mayor velocidad secuencial y aleatoria, menor latencia y mejora en tiempos de carga y respuesta del sistema.</p></details>
+        <details><summary>¿Con qué frecuencia debo cambiar la pasta térmica?</summary><p>Normalmente cada 1-3 años, dependiendo del tipo de pasta y temperaturas observadas.</p></details>
+      </section>
+
+      <!-- CONTACTO -->
+      <section id="contact" class="panel" data-animate>
+        <h2>Contacto</h2>
+        <p>Para consultas, revisiones de builds o colaboraciones escribe a <a href="mailto:edgar@hardwarefuturista.com">edgar@hardwarefuturista.com</a>.</p>
+      </section>
+	<!-- QUIZ INTERACTIVO -->
+<section id="quiz" class="panel" data-animate>
+  <h2>Quiz de Hardware Futurista</h2>
+  <div id="quizContainer" style="position:relative; margin-top:20px; padding:20px; background:rgba(0,0,0,0.7); border-radius:15px; width:100%; max-width:600px; margin-left:auto; margin-right:auto; perspective:1200px;">
+    <h3 id="question">Pregunta aparecerá aquí</h3>
+    <div style="display:flex; flex-direction:column; gap:12px; margin-top:15px;">
+      <button onclick="checkAnswer(this)">Opción 1</button>
+      <button onclick="checkAnswer(this)">Opción 2</button>
+      <button onclick="checkAnswer(this)">Opción 3</button>
+      <button onclick="checkAnswer(this)">Opción 4</button>
+    </div>
+  </div>
+</section>
+
+<!-- SONIDOS -->
+<audio id="correctSound" src="https://freesound.org/data/previews/522/522329_11681789-lq.mp3"></audio>
+<audio id="wrongSound" src="https://freesound.org/data/previews/256/256113_4486188-lq.mp3"></audio>
+
+<script>
+/* ===== VARIABLES ===== */
+const quizData = [
+  {q:"¿Cuál es la capital de Francia?", options:["París","Londres","Madrid","Berlín"], answer:0},
+  {q:"¿2 + 2 * 2 = ?", options:["6","8","4","10"], answer:0},
+  {q:"¿Cuál es el planeta rojo?", options:["Venus","Marte","Júpiter","Saturno"], answer:1},
+  {q:"¿Qué componente almacena temporalmente datos?", options:["SSD","GPU","RAM","PSU"], answer:2},
+  {q:"¿Qué certificación indica eficiencia energética en una PSU?", options:["80+ Bronze","VRM","PCIe","TDP"], answer:0}
+];
+
+let currentQuestion = 0;
+const quizContainer = document.getElementById('quizContainer');
+const questionEl = document.getElementById('question');
+const buttons = quizContainer.querySelectorAll('button');
+const correctSound = document.getElementById('correctSound');
+const wrongSound = document.getElementById('wrongSound');
+
+/* ===== CARGAR PREGUNTA ===== */
+function loadQuestion(){
+  const q = quizData[currentQuestion];
+  questionEl.innerText = q.q;
+  buttons.forEach((btn,i)=>{
+    btn.innerText = q.options[i];
+    btn.style.background='#333';
+    btn.style.color='#fff';
+    btn.disabled=false;
+  });
+}
+loadQuestion();
+
+/* ===== CONFETI ===== */
+const canvas = document.createElement('canvas');
+canvas.style.position='fixed';
+canvas.style.top=0;
+canvas.style.left=0;
+canvas.style.width='100%';
+canvas.style.height='100%';
+canvas.style.pointerEvents='none';
+canvas.style.zIndex=9999;
+document.body.appendChild(canvas);
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+class Confetti{
+  constructor(x,y){
+    this.x=x+Math.random()*30-15;
+    this.y=y+Math.random()*30-15;
+    this.size=Math.random()*6+4;
+    this.color=`hsl(${Math.random()*360},100%,50%)`;
+    this.speedX=Math.random()*4-2;
+    this.speedY=Math.random()*-5-2;
+    this.gravity=0.1;
+    this.opacity=1;
+  }
+  update(){
+    this.speedY += this.gravity;
+    this.x += this.speedX;
+    this.y += this.speedY;
+    this.opacity -=0.02;
+  }
+  draw(){
+    ctx.fillStyle=this.color;
+    ctx.globalAlpha=this.opacity;
+    ctx.fillRect(this.x,this.y,this.size,this.size);
+    ctx.globalAlpha=1;
+  }
+}
+let confettiArray=[];
+function createConfetti(x,y){
+  for(let i=0;i<30;i++) confettiArray.push(new Confetti(x,y));
+  setTimeout(()=>{confettiArray=[]},1200);
+}
+
+/* ===== PARTICULAS DE FONDO ===== */
+const particles = [];
+for(let i=0;i<150;i++){
+  particles.push({
+    x:Math.random()*canvas.width,
+    y:Math.random()*canvas.height,
+    r:Math.random()*2+1,
+    speedX:Math.random()*0.5-0.25,
+    speedY:Math.random()*0.5-0.25
+  });
+}
+
+function animateCanvas(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  // partículas
+  particles.forEach(p=>{
+    p.x += p.speedX;
+    p.y += p.speedY;
+    if(p.x<0)p.x=canvas.width;if(p.x>canvas.width)p.x=0;
+    if(p.y<0)p.y=canvas.height;if(p.y>canvas.height)p.y=0;
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle='rgba(0,200,255,0.5)';
+    ctx.fill();
+  });
+  // confeti
+  confettiArray.forEach(c=>{c.update();c.draw();});
+  requestAnimationFrame(animateCanvas);
+}
+animateCanvas();
+
+/* ===== CHEQUEAR RESPUESTA ===== */
+function checkAnswer(btn){
+  const q = quizData[currentQuestion];
+  const index = Array.from(buttons).indexOf(btn);
+  buttons.forEach(b=>b.disabled=true);
+  if(index===q.answer){
+    btn.style.background='green';
+    createConfetti(window.innerWidth/2, window.innerHeight/2);
+    correctSound.play();
+  }else{
+    btn.style.background='red';
+    wrongSound.play();
+  }
+  setTimeout(()=>{
+    currentQuestion++;
+    if(currentQuestion>=quizData.length) currentQuestion=0;
+    loadQuestion();
+  },1200);
+}
+
+/* ===== EFECTO 3D AL MOVER MOUSE ===== */
+quizContainer.addEventListener('mousemove', e=>{
+  const rect = quizContainer.getBoundingClientRect();
+  const dx = e.clientX - rect.left - rect.width/2;
+  const dy = e.clientY - rect.top - rect.height/2;
+  quizContainer.style.transform = `translate(-50%, -50%) rotateY(${dx/40}deg) rotateX(${-dy/40}deg)`;
+});
+quizContainer.addEventListener('mouseleave', ()=>{
+  quizContainer.style.transform = `translate(-50%, -50%) rotateY(0deg) rotateX(0deg)`;
+});
+</script>
+
+    </article>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
